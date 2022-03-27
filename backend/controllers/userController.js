@@ -33,8 +33,8 @@ const registerUser = asyncHandler(async (req, res) => {
     password: hashedPassword,
   });
 
-  if (user) {
-    res.send(201).json({
+  if (user) {   
+    res.sendStatus(201).json({
       _id: user._id,
       name: user.name,
       email: user.email,
